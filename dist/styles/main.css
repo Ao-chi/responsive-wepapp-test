@@ -1,0 +1,348 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+*,
+*::after,
+*::before {
+  transition: all ease-in 0.2s;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+.main {
+  position: relative;
+  min-height: 100%;
+  padding: 5%;
+}
+.main__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+  z-index: -1;
+}
+@media only screen and (min-width: 756px) {
+  .main__bg {
+    object-position: 90%;
+  }
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  height: 100%;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 992px) {
+  .main-content {
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.972953819) 0%, rgba(255, 255, 255, 0.8344129888) 49%, rgba(255, 255, 255, 0) 93%);
+  padding: 5%;
+  margin-left: calc(50% - 50vw);
+  margin-top: auto;
+}
+.hero__img {
+  position: relative;
+}
+.hero__img img {
+  width: 50%;
+  margin-left: -5px;
+  margin-bottom: 5px;
+}
+.hero__img::after {
+  content: "The";
+  display: block;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  font-size: 1rem;
+  font-style: italic;
+  width: 50%;
+}
+.hero__heading {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero__heading h1 {
+  color: #8bc53f;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.hero__heading p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media only screen and (min-width: 756px) {
+  .hero__img img {
+    width: 40%;
+  }
+  .hero__img::after {
+    content: "The";
+    display: block;
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -6px;
+    font-size: 2rem;
+    font-style: italic;
+    width: 60%;
+  }
+  .hero__heading {
+    max-width: 855px;
+    margin: 0;
+    margin-left: auto;
+  }
+  .hero__heading h1 {
+    font-size: 3rem;
+  }
+  .hero__heading p {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero {
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.972953819) 0%, rgba(255, 255, 255, 0.6524790416) 49%, rgba(255, 255, 255, 0) 69%);
+  }
+  .hero__img img {
+    width: 30%;
+  }
+  .hero__img::after {
+    content: "The";
+    bottom: -6px;
+    width: 70%;
+  }
+  .hero__heading {
+    max-width: 1020px;
+    margin: 0;
+    margin-left: auto;
+  }
+  .hero__heading h1 {
+    font-size: 3rem;
+  }
+  .hero__heading p {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.schedule-demo {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+.schedule-demo__left {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: relative;
+  color: white;
+  background-color: #8bc53f;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.schedule-demo__left h2 {
+  text-transform: uppercase;
+}
+.schedule-demo__left p {
+  text-transform: capitalize;
+}
+.schedule-demo__left::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: -15px;
+  display: block;
+  background-color: #8bc53f;
+  width: 100%;
+  height: 20px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 33%, 50% 100%, 0 33%);
+}
+.schedule-demo__right {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  padding-top: 3rem;
+}
+.schedule-demo__right h3 {
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.schedule-demo__right h3 span {
+  display: block;
+  color: #8bc53f;
+}
+@media only screen and (min-width: 992px) {
+  .schedule-demo {
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+  .schedule-demo__left {
+    border-bottom-left-radius: 5px;
+  }
+  .schedule-demo__left h2 {
+    white-space: nowrap;
+  }
+  .schedule-demo__left::after {
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    width: 37px;
+    height: inherit;
+    clip-path: polygon(0% 0%, 50% 0, 100% 50%, 53% 100%, 0% 100%);
+  }
+  .schedule-demo__right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.5rem;
+    padding-left: 5%;
+  }
+  .schedule-demo__right h3 {
+    font-size: 22px;
+  }
+  .schedule-demo__right h3 span {
+    display: inline-block;
+  }
+}
+
+.my-form {
+  display: flex;
+  justify-content: space-around;
+}
+.my-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 1rem;
+}
+.my-form input[type=text],
+.my-form input[type=email] {
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1.5px solid #c0c0c0;
+}
+.my-form input:focus {
+  outline: 1.5px solid #8bc53f;
+}
+.my-form input:hover {
+  border: 1.5px solid #8bc53f;
+}
+.my-form input::placeholder {
+  color: #c0c0c0;
+}
+.my-form button {
+  color: white;
+  background-color: #8bc53f;
+  border: 2px solid #70a130;
+  border-radius: 5px;
+  padding: 5px 2.5rem;
+  text-transform: uppercase;
+  white-space: normal;
+  cursor: pointer;
+}
+.my-form button:hover {
+  background-color: #70a130;
+}
+@media only screen and (min-width: 1200px) {
+  .my-form form {
+    flex-direction: row;
+    padding-top: 0;
+  }
+  .my-form button {
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
